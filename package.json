@@ -1,0 +1,6 @@
+{
+  "name": "it-wordbook",
+  "devDependencies": {
+    "firebase-tools": "^13.0.3"
+  }
+}
