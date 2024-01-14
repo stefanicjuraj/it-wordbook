@@ -7,9 +7,10 @@ interface WordBookProps {
 }
 
 const WordBookComponent: React.FC<WordBookProps> = ({ data, searchTerm }) => {
-    const filterData = data.filter(item =>
+    let filterData = data.filter(item =>
         item.word.toLowerCase().includes(searchTerm.toLowerCase())
     );
+    filterData = filterData.sort((a, b) => a.word.localeCompare(b.word));
     return (
         <div className="max-w-screen-md mx-auto my-10">
             <p className="m-2 text-gray-400 text-sm text-right">
