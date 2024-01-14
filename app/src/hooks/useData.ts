@@ -18,6 +18,7 @@ export const useData = () => {
               id: document.id + "-" + key,
               word: wordbookData[key].word,
               definition: wordbookData[key].definition,
+              tags: wordbookData[key].tags,
             });
           }
         });
