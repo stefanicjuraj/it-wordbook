@@ -18,12 +18,20 @@ const FilterTags: React.FC<FilterTags> = ({ tags, onTagsChange }) => {
         });
     };
 
+    const clearTags = () => {
+        setSelectedTags([]);
+    };
+
     useEffect(() => {
         onTagsChange(selectedTags);
     }, [selectedTags, onTagsChange]);
 
     return (
         <div className="max-w-screen-sm mx-auto mt-10">
+            {selectedTags.length > 0 && (
+                <button type="button" className="text-xs font-normal text-center text-gray-500"
+                    onClick={clearTags}>Clear tags</button>
+            )}
             <ul className="items-center w-full bg-white rounded-lg sm:flex">
                 {tags.map(tag => (
                     <li key={tag} className="w-full">
