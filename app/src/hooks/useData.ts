@@ -5,6 +5,7 @@ import { WordBook } from "../types/wordbook";
 
 export const useData = () => {
   const [data, setData] = useState<WordBook[]>([]);
+  const [tags, setTags] = useState<string[]>([]);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -23,6 +24,7 @@ export const useData = () => {
           }
         });
         setData(data);
+        setTags(getTags(data));
       } catch (err) {
         return err;
       }
@@ -31,5 +33,10 @@ export const useData = () => {
     fetchData();
   }, []);
 
-  return { data };
+  return { data, tags };
+};
+
+const getTags = (data: WordBook[]): string[] => {
+  const tags = data.flatMap((item) => item.tags);
+  return Array.from(new Set(tags));
 };
