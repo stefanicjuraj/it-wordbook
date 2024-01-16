@@ -26,6 +26,8 @@ const FilterTags: React.FC<FilterTags> = ({ tags, onTagsChange }) => {
         onTagsChange(selectedTags);
     }, [selectedTags, onTagsChange]);
 
+    const sortTags = [...tags].sort((a, b) => a.localeCompare(b));
+
     return (
         <div className="max-w-screen-sm mx-auto mt-10">
             {selectedTags.length > 0 && (
@@ -33,7 +35,7 @@ const FilterTags: React.FC<FilterTags> = ({ tags, onTagsChange }) => {
                     onClick={clearTags}>Clear tags</button>
             )}
             <ul className="items-center w-full bg-white rounded-lg sm:flex">
-                {tags.map(tag => (
+                {sortTags.map(tag => (
                     <li key={tag} className="w-full">
                         <div className="flex items-center ps-3">
                             <input type="checkbox"
