@@ -12,8 +12,7 @@ const App: React.FC = () => {
 
   const filterDataByTags = data.filter(item => {
     if (selectedTags.length === 0) return true;
-    return selectedTags.every(tag => item.tags.includes(tag)) &&
-      item.tags.every(tag => selectedTags.includes(tag));
+    return selectedTags.some(tag => item.tags.includes(tag));
   });
 
   return (
