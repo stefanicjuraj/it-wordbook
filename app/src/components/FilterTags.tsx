@@ -1,11 +1,7 @@
 import React, { useState, useEffect } from 'react';
+import { FilterTagsProps } from '../types/tags';
 
-interface FilterTags {
-    tags: string[];
-    onTagsChange: (selectedTags: string[]) => void;
-}
-
-const FilterTags: React.FC<FilterTags> = ({ tags, onTagsChange }) => {
+const FilterTags: React.FC<FilterTagsProps> = ({ tags, onTagsChange }) => {
     const [selectedTags, setSelectedTags] = useState<string[]>([]);
 
     const handleCheckboxChange = (tag: string) => {
