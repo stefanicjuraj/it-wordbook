@@ -1,8 +1,5 @@
 import React from 'react';
-
-interface TagsProps {
-    tags: string[];
-}
+import { TagsProps } from '../types/tags';
 
 const Tags: React.FC<TagsProps> = ({ tags }) => {
     const sortTags = [...tags].sort();
