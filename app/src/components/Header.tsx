@@ -1,11 +1,13 @@
 import React from 'react';
+import icon from '../../public/assets/icons/wordbook-icon.svg';
 
 const Header: React.FC = () => {
     return (
         <>
             <nav className="bg-black fixed w-full z-20 top-0 start-0 py-1">
-                <div className="max-w-screen-lg flex flex-wrap items-center justify-between mx-auto p-4">
+                <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
                     <div className="flex items-center space-x-3 rtl:space-x-reverse">
+                        <img src={icon} alt="IT wordbook icon" className="w-9 h-9" />
                         <span className="self-center text-3xl text-white font-black whitespace-nowrap">
                             IT wordbook
                         </span>
