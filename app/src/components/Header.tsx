@@ -1,5 +1,6 @@
 import React from 'react';
 import icon from '../../public/assets/icons/wordbook-icon.svg';
+import github from '../../public/assets/icons/github.svg';
 
 const Header: React.FC = () => {
     return (
@@ -13,6 +14,7 @@ const Header: React.FC = () => {
                         </span>
                     </div>
                     <div className="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
+                        <img src={github} alt="GitHub icon" className="w-5 h-5" />
                     </div>
                 </div>
             </nav>
