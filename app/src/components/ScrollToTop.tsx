@@ -1,5 +1,6 @@
 import React from 'react';
 import useShowScrollToTop from '../hooks/useShowScrollToTop';
+import arrow from '../../public/assets/icons/arrow.svg';
 
 const ScrollToTop: React.FC = () => {
     const isShown = useShowScrollToTop();
@@ -20,6 +21,7 @@ const ScrollToTop: React.FC = () => {
             aria-label="Back to top"
             onClick={scrollToTop}
         >
+            <img src={arrow} alt="Back to top arrow icon" className="w-5 h-5" />
         </button>
     );
 };
