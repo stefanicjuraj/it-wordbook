@@ -6,9 +6,11 @@ import { WordBook } from "../types/wordbook";
 export const useData = () => {
   const [data, setData] = useState<WordBook[]>([]);
   const [tags, setTags] = useState<string[]>([]);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     const fetchData = async () => {
+      setLoading(true);
       try {
         const querySnapshot = await getDocs(collection(db, "it-wordbook"));
         const data: WordBook[] = [];
@@ -27,13 +29,15 @@ export const useData = () => {
         setTags(getTags(data));
       } catch (err) {
         return err;
+      } finally {
+        setLoading(false);
       }
     };
 
     fetchData();
   }, []);
 
-  return { data, tags };
+  return { data, tags, loading };
 };
 
 const getTags = (data: WordBook[]): string[] => {
