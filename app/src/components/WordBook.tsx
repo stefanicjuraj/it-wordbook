@@ -17,21 +17,21 @@ const WordBookComponent: React.FC<WordBookProps> = ({ data, searchTerm }) => {
             <p className="m-2 text-gray-400 text-sm text-right">
                 {filterData.length} result(s)
             </p>
-            {filterData.length > 0 ? (
-                <div className="relative overflow-x-auto shadow-md rounded-lg">
-                    <table className="w-full text-sm text-left rtl:text-right text-gray-500">
-                        <thead className="text-md text-gray-900">
-                            <tr className="border-b border-gray-200">
-                                <th scope="col" className="px-6 py-3 bg-gray-100">
-                                    Word
-                                </th>
-                                <th scope="col" className="px-6 py-3 bg-gray-50">
-                                    Definition
-                                </th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            {filterData.map((item) => (
+            <div className="relative overflow-x-auto shadow-md rounded-lg">
+                <table className="w-full text-sm text-left rtl:text-right text-gray-500">
+                    <thead className="text-md text-gray-900">
+                        <tr className="border-b border-gray-200">
+                            <th scope="col" className="px-6 py-3 bg-gray-100">
+                                Word
+                            </th>
+                            <th scope="col" className="px-6 py-3 bg-gray-50">
+                                Definition
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {filterData.length > 0 ? (
+                            filterData.map((item) => (
                                 <tr key={item.id} className="border-b border-gray-200 bg-gray-50">
                                     <th scope="row" className="px-6 py-4 font-medium text-gray-900 bg-gray-100">
                                         {item.word}
@@ -43,15 +43,17 @@ const WordBookComponent: React.FC<WordBookProps> = ({ data, searchTerm }) => {
                                         {item.definition}
                                     </td>
                                 </tr>
-                            ))}
-                        </tbody>
-                    </table>
-                </div>
-            ) : (
-                <div className="text-center py-10">
-                    <p className="text-gray-500 text-sm">No results found</p>
-                </div>
-            )}
+                            ))
+                        ) : (
+                            <tr>
+                                <th scope="col" className="px-6 py-4 font-medium text-gray-900 bg-gray-100" colSpan={2}>
+                                    No results found
+                                </th>
+                            </tr>
+                        )}
+                    </tbody>
+                </table>
+            </div>
         </div>
     );
 };
