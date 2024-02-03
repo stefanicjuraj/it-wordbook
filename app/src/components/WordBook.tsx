@@ -52,8 +52,8 @@ const WordBookComponent: React.FC<WordBookProps> = ({ data, searchTerm, loading 
                             ))
                         ) : searchTerm ? (
                             <tr>
-                                <th scope="col" className="px-6 py-4 font-medium text-gray-700 bg-gray-50 text-center" colSpan={2}>
-                                    No results found
+                                <th scope="col" className="px-6 py-4 font-normal text-gray-500 bg-gray-50 text-center" colSpan={2}>
+                                    No results found for "{searchTerm}"
                                 </th>
                             </tr>
                         ) : null}
