@@ -5,13 +5,19 @@ import Tags from './Tags.tsx';
 interface WordBookProps {
     data: WordBook[];
     searchTerm: string;
+    loading: boolean;
 }
 
-const WordBookComponent: React.FC<WordBookProps> = ({ data, searchTerm }) => {
+const WordBookComponent: React.FC<WordBookProps> = ({ data, searchTerm, loading }) => {
     let filterData = data.filter(item =>
         item.word.toLowerCase().includes(searchTerm.toLowerCase())
     );
     filterData = filterData.sort((a, b) => a.word.localeCompare(b.word));
+
+    if (loading) {
+        return <></>
+    }
+
     return (
         <div className="max-w-screen-md mx-auto my-10">
             <p className="m-2 text-gray-400 text-sm text-right">
@@ -44,13 +50,13 @@ const WordBookComponent: React.FC<WordBookProps> = ({ data, searchTerm }) => {
                                     </td>
                                 </tr>
                             ))
-                        ) : (
+                        ) : searchTerm ? (
                             <tr>
-                                <th scope="col" className="px-6 py-4 font-medium text-gray-900 bg-gray-100" colSpan={2}>
+                                <th scope="col" className="px-6 py-4 font-medium text-gray-700 bg-gray-50 text-center" colSpan={2}>
                                     No results found
                                 </th>
                             </tr>
-                        )}
+                        ) : null}
                     </tbody>
                 </table>
             </div>
