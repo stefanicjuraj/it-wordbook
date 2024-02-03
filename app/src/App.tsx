@@ -21,7 +21,7 @@ const App: React.FC = () => {
       <Header />
       <Search onSearch={(term) => setSearchTerm(term)} />
       <FilterTags tags={tags} onTagsChange={setSelectedTags} />
-      <WordBook data={filterDataByTags} searchTerm={searchTerm} />
+      <WordBook data={filterDataByTags} searchTerm={searchTerm} loading={false} />
       <ScrollToTop />
     </>
   );
