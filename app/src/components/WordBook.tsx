@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { WordBook } from '../types/wordbook.ts';
 import Tags from './Tags.tsx';
 
@@ -54,6 +55,9 @@ const WordBookComponent: React.FC<WordBookProps> = ({ data, searchTerm, loading 
                             <tr>
                                 <th scope="col" className="px-6 py-4 font-normal text-gray-500 bg-gray-50 text-center" colSpan={2}>
                                     No results found for "{searchTerm}"
+                                    <Link to="/form" className="ml-5 inline-flex items-center justify-center px-4 py-2.5 text-md font-medium text-center bg-gray-200 text-black rounded-lg border-white border hover:underline hover:shadow-sm hover:shadow-white">
+                                        Suggest a word
+                                    </Link>
                                 </th>
                             </tr>
                         ) : null}
