@@ -1,5 +1,6 @@
 {
   "name": "it-wordbook",
+  "version": "1.0.0",
   "devDependencies": {
     "firebase-tools": "^13.0.3"
   }
