@@ -17,7 +17,7 @@ I plan to continue developing this tool, potentially making it accessible to a w
 - **📚 1000+ words** — Browse the continuously updating wordbook with over 1000 IT related keywords, terms, and concepts.
 - **🔍 Search** — Quickly search and find specific IT related terms with descriptive explanations.
 - **🏷️ Tags** — Select tags to filter departments within the IT industry.
-- **🤝 Public contributions** — [Suggest words]() to be added to the wordbook!
+- **🤝 Public contributions** — [Suggest words](https://it-wordbook.web.app/form) to be added to the wordbook!
 
 ## Technology
 
