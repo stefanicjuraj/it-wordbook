@@ -25,7 +25,7 @@ const FilterTags: React.FC<FilterTagsProps> = ({ tags, onTagsChange }) => {
     const sortTags = [...tags].sort((a, b) => a.localeCompare(b));
 
     return (
-        <div className="max-w-screen-sm mx-auto mt-10">
+        <div className="max-w-screen-sm mx-auto mt-10 animation glow delay-2">
             <p className="text-gray-400 text-sm text-center my-2">
                 Apply a tag to filter your search
             </p>

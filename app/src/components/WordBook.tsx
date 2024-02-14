@@ -15,7 +15,7 @@ const WordBookComponent: React.FC<WordBookProps> = ({ data, searchTerm }) => {
     filterData = filterData.sort((a, b) => a.word.localeCompare(b.word));
 
     return (
-        <div className="max-w-screen-md mx-auto my-10">
+        <div className="max-w-screen-md mx-auto my-10 animation glow delay-3">
             <p className="m-2 text-gray-400 text-sm text-right">
                 {filterData.length} result(s)
             </p>

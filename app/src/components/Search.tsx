@@ -2,7 +2,7 @@ import search from "../../public/assets/icons/search.svg"
 
 const Search: React.FC<{ onSearch: (term: string) => void }> = ({ onSearch }) => {
     return (
-        <form className="max-w-screen-sm mx-auto">
+        <form className="max-w-screen-sm mx-auto animation glow delay-1">
             <div className="relative">
                 <div className="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
                     <img src={search} alt="Search icon" className="w-5 h-5" />
