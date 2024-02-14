@@ -8,3 +8,44 @@ body {
   -webkit-user-select: none;
   -moz-user-select: none;
 }
+
+/* animation */
+.animation {
+  animation-duration: 0.5s;
+  animation-delay: 0.5s;
+  animation-name: animation;
+  animation-timing-function: cubic-bezier(0.26, 0.53, 0.74, 1.48);
+  animation-fill-mode: backwards;
+}
+
+.animation.glow {
+  animation-name: animation;
+  animation-timing-function: ease;
+}
+
+/* keyframes animation  */
+@keyframes animation {
+  0% {
+    opacity: 0;
+    transform: scale(0.999, 0.999);
+    -webkit-transform: scale(0.999, 0.999);
+    -moz-transform: scale(0.999, 0.999);
+    -ms-transform: scale(0.999, 0.999);
+    -o-transform: scale(0.999, 0.999);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1, 1);
+  }
+}
+
+/* delays */
+.delay-1 {
+  animation-delay: 0.5s;
+}
+.delay-2 {
+  animation-delay: 1s;
+}
+.delay-3 {
+  animation-delay: 1.5s;
+}
