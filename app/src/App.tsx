@@ -7,6 +7,7 @@ import { useData } from './hooks/useData.ts';
 import FilterTags from './components/FilterTags.tsx';
 import ScrollToTop from './components/ScrollToTop.tsx';
 import Form from './components/Form.tsx';
+import './App.css';
 
 const App: React.FC = () => {
   const { data, tags } = useData();
