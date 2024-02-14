@@ -6,18 +6,13 @@ import Tags from './Tags.tsx';
 interface WordBookProps {
     data: WordBook[];
     searchTerm: string;
-    loading: boolean;
 }
 
-const WordBookComponent: React.FC<WordBookProps> = ({ data, searchTerm, loading }) => {
+const WordBookComponent: React.FC<WordBookProps> = ({ data, searchTerm }) => {
     let filterData = data.filter(item =>
         item.word.toLowerCase().includes(searchTerm.toLowerCase())
     );
     filterData = filterData.sort((a, b) => a.word.localeCompare(b.word));
-
-    if (loading) {
-        return <></>
-    }
 
     return (
         <div className="max-w-screen-md mx-auto my-10">
