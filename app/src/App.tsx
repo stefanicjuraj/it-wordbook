@@ -1,15 +1,15 @@
 import React, { useState } from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import Header from './components/Header.tsx';
-import Search from './components/Search.tsx';
-import { WordBook } from './components/WordBook.tsx';
 import { useData } from './hooks/useData.ts';
-import FilterTags from './components/FilterTags.tsx';
-import ScrollToTop from './components/ScrollToTop.tsx';
-import Form from './components/Form.tsx';
+import { Header } from './components/Header.tsx';
+import { Search } from './components/Search.tsx';
+import { FilterTags } from './components/FilterTags.tsx';
+import { WordBook } from './components/WordBook.tsx';
+import { Form } from './components/Form.tsx';
+import { ScrollToTop } from './components/ScrollToTop.tsx';
 import './App.css';
 
-const App: React.FC = () => {
+export const App: React.FC = () => {
   const { data, tags } = useData();
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedTags, setSelectedTags] = useState<string[]>([]);
@@ -38,5 +38,3 @@ const App: React.FC = () => {
     </>
   );
 }
-
-export default App
