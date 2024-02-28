@@ -1,12 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { WordBook } from '../types/wordbook.ts';
+import { WordBookProps } from '../types/wordbookProps';
 import Tags from './Tags.tsx';
-
-interface WordBookProps {
-    data: WordBook[];
-    searchTerm: string;
-}
 
 const WordBookComponent: React.FC<WordBookProps> = ({ data, searchTerm }) => {
     let filterData = data.filter(item =>
