@@ -1,6 +1,6 @@
-import search from "../../public/assets/icons/search.svg"
+import search from "/public/assets/icons/search.svg"
 
-const Search: React.FC<{ onSearch: (term: string) => void }> = ({ onSearch }) => {
+export const Search: React.FC<{ onSearch: (term: string) => void }> = ({ onSearch }) => {
     return (
         <form className="max-w-screen-sm mx-auto animation glow delay-1">
             <div className="relative">
@@ -17,5 +17,3 @@ const Search: React.FC<{ onSearch: (term: string) => void }> = ({ onSearch }) =>
         </form>
     );
 };
-
-export default Search;

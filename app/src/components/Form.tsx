@@ -1,9 +1,6 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
 
-const Form: React.FC = () => {
-
-    // Import the form submission access key
+export const Form: React.FC = () => {
     const accessKey = import.meta.env.VITE_ACCESS_KEY || '';
 
     return (
@@ -117,5 +114,3 @@ const Form: React.FC = () => {
         </>
     );
 }
-
-export default Form;

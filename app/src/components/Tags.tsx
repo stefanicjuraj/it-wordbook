@@ -1,7 +1,6 @@
-import React from 'react';
 import { TagsProps } from '../types/tags';
 
-const Tags: React.FC<TagsProps> = ({ tags }) => {
+export const Tags: React.FC<TagsProps> = ({ tags }) => {
     const sortTags = [...tags].sort();
 
     const renderTags = () => {
@@ -26,5 +25,3 @@ const Tags: React.FC<TagsProps> = ({ tags }) => {
         </>
     );
 };
-
-export default Tags;

@@ -1,8 +1,7 @@
-import React from 'react';
-import useShowScrollToTop from '../hooks/useShowScrollToTop';
-import arrow from '../../public/assets/icons/arrow.svg';
+import { useShowScrollToTop } from '../hooks/useShowScrollToTop';
+import arrow from '/public/assets/icons/arrow.svg';
 
-const ScrollToTop: React.FC = () => {
+export const ScrollToTop: React.FC = () => {
     const isShown = useShowScrollToTop();
 
     const scrollToTop = () => {
@@ -25,5 +24,3 @@ const ScrollToTop: React.FC = () => {
         </button>
     );
 };
-
-export default ScrollToTop;

@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { FilterTagsProps } from '../types/tags';
 
-const FilterTags: React.FC<FilterTagsProps> = ({ tags, onTagsChange }) => {
+export const FilterTags: React.FC<FilterTagsProps> = ({ tags, onTagsChange }) => {
     const [selectedTags, setSelectedTags] = useState<string[]>([]);
 
     const handleCheckboxChange = (tag: string) => {
@@ -52,5 +52,3 @@ const FilterTags: React.FC<FilterTagsProps> = ({ tags, onTagsChange }) => {
         </div>
     );
 };
-
-export default FilterTags;

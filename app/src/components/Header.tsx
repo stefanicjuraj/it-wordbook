@@ -1,8 +1,7 @@
-import React from 'react';
-import icon from '../../public/assets/icons/wordbook-icon.svg';
-import github from '../../public/assets/icons/github.svg';
+import icon from '/public/assets/icons/wordbook-icon.svg';
+import github from '/public/assets/icons/github.svg';
 
-const Header: React.FC = () => {
+export const Header: React.FC = () => {
     return (
         <>
             <nav className="bg-black fixed w-full z-20 top-0 start-0 py-1">
@@ -23,5 +22,3 @@ const Header: React.FC = () => {
         </>
     );
 };
-
-export default Header;

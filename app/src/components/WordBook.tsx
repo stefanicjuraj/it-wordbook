@@ -1,7 +1,6 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
 import { WordBookProps } from '../types/wordbookProps';
-import Tags from './Tags.tsx';
+import { Tags } from './Tags.tsx';
 
 export const WordBook: React.FC<WordBookProps> = ({ data, searchTerm }) => {
     let filterData = data.filter(item =>
