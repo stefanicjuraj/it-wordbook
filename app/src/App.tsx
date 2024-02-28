@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Header from './components/Header.tsx';
 import Search from './components/Search.tsx';
-import WordBook from './components/WordBook.tsx';
+import { WordBook } from './components/WordBook.tsx';
 import { useData } from './hooks/useData.ts';
 import FilterTags from './components/FilterTags.tsx';
 import ScrollToTop from './components/ScrollToTop.tsx';
