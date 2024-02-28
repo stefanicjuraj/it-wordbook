@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { WordBookProps } from '../types/wordbookProps';
 import Tags from './Tags.tsx';
 
-const WordBookComponent: React.FC<WordBookProps> = ({ data, searchTerm }) => {
+export const WordBook: React.FC<WordBookProps> = ({ data, searchTerm }) => {
     let filterData = data.filter(item =>
         item.word.toLowerCase().includes(searchTerm.toLowerCase())
     );
@@ -57,5 +57,3 @@ const WordBookComponent: React.FC<WordBookProps> = ({ data, searchTerm }) => {
         </div>
     );
 };
-
-export default WordBookComponent;
