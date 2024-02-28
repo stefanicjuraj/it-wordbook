@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { collection, getDocs } from "firebase/firestore";
-import { db } from "../services/firebaseService";
+import { db } from "../services/firebase";
 import { WordBook } from "../types/wordbook";
 
 export const useData = () => {
