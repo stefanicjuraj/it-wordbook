@@ -28,7 +28,7 @@ export const App: React.FC = () => {
             <>
               <Search onSearch={(term) => setSearchTerm(term)} />
               <FilterTags tags={tags} onTagsChange={setSelectedTags} />
-              <WordBook data={filterDataByTags} searchTerm={searchTerm} />
+              <WordBook data={filterDataByTags} searchTerm={searchTerm} selectedTags={selectedTags} />
               <ScrollToTop />
             </>
           } />
