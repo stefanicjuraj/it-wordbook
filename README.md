@@ -2,6 +2,8 @@
 
 <img align="right" width="200px" src="./app/public/assets/icons/wordbook-logo.svg" />
 
+[**it-wordbook.web.app**](https://it-wordbook.web.app)
+
 IT wordbook is a web application providing a searchable database collection of IT keywords, terms, and concepts with descriptive explanations. The application contains tags to filter words by departments within the IT industry:
 
 - `Backend`, `Data`, `Design`, `DevOps`, `Docs`, `Frontend`, `Position`, `QA`, `Security`
