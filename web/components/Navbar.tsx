@@ -5,16 +5,16 @@ export default function Navbar() {
         <div className="flex justify-between">
           <div className="flex items-center px-2 py-4">
             <img
-              src="/assets/icons/wordbook-icon.svg"
+              src="/assets/icons/techbook-icon.svg"
               alt="logo"
               className="w-10 h-10 mr-3"
             />
-            <h1 className="text-2xl font-bold text-white">IT wordbook</h1>
+            <h1 className="text-2xl font-bold text-white">techbook.digital</h1>
           </div>
 
           <div className="flex items-center">
             <a
-              href="https://github.com/stefanicjuraj/it-wordbook"
+              href="https://github.com/stefanicjuraj/techbook.digital"
               target="_blank"
               rel="noopener noreferrer"
               className="p-2"

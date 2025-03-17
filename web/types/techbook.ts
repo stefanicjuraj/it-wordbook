@@ -1,4 +1,4 @@
-export interface WordBook {
+export interface TechBook {
   id: string;
   word: string;
   definition: string;

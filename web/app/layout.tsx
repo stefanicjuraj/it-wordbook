@@ -2,21 +2,21 @@ import type { Metadata } from "next";
 import "../globals.css";
 
 export const metadata: Metadata = {
-  title: "IT wordbook",
+  title: "TechBook",
   description:
-    "IT wordbook - searchable database collection of IT keywords, terms, and concepts with descriptive explanations.",
+    "searchable database collection of IT keywords, terms, and concepts with descriptive explanations.",
   keywords: [
-    "IT Wordbook",
-    "IT Dictionary",
-    "IT Terms",
-    "IT Definitions",
-    "IT Glossary",
-    "IT Vocabulary",
-    "IT Language",
-    "IT Terminology",
-    "IT Jargon",
-    "IT Acronyms",
-    "IT Abbreviations",
+    "TechBook",
+    "Tech Dictionary",
+    "Tech Terms",
+    "Tech Definitions",
+    "Tech Glossary",
+    "Tech Vocabulary",
+    "Tech Language",
+    "Tech Terminology",
+    "Tech Jargon",
+    "Tech Acronyms",
+    "Tech Abbreviations",
     "Tech Terms",
     "Tech Definitions",
     "Tech Glossary",
@@ -26,14 +26,14 @@ export const metadata: Metadata = {
     "Tech Jargon",
   ],
   openGraph: {
-    title: "IT wordbook",
+    title: "TechBook",
     description:
-      "IT wordbook - searchable database collection of IT keywords, terms, and concepts with descriptive explanations.",
-    url: "https://it-wordbook.web.app",
-    siteName: "IT wordbook",
+      "searchable database collection of IT keywords, terms, and concepts with descriptive explanations.",
+    url: "https://techbook.digital",
+    siteName: "TechBook",
     images: [
       {
-        url: "https://it-wordbook.web.app/assets/images/it-wordbook.jpg",
+        url: "https://techbook.digital/assets/images/techbook.jpg",
         width: 1200,
         height: 630,
       },
@@ -51,7 +51,7 @@ export default function RootLayout({
     <html lang="en">
       <head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="icon" href="/assets/icons/wordbook-logo.svg" />
+        <link rel="icon" href="/assets/icons/techbook-logo.svg" />
       </head>
       <body>{children}</body>
     </html>

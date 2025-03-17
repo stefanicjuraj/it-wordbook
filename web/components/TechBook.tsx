@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react";
 import { useData } from "../hooks/useData";
 
-export default function DataDisplay() {
+export default function TechBook() {
   const { data, tags } = useData();
   const [searchTerm, setSearchTerm] = useState("");
   const [selectedTags, setSelectedTags] = useState<string[]>([]);

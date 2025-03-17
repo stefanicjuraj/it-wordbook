@@ -3,25 +3,25 @@
 import { useEffect, useState } from "react";
 import { collection, getDocs } from "firebase/firestore";
 import { db } from "../firebase";
-import { WordBook } from "../types/wordbook";
+import { TechBook } from "../types/techbook";
 
 export const useData = () => {
-  const [data, setData] = useState<WordBook[]>([]);
+  const [data, setData] = useState<TechBook[]>([]);
   const [tags, setTags] = useState<string[]>([]);
 
   useEffect(() => {
     const fetchData = async () => {
       try {
         const querySnapshot = await getDocs(collection(db, "it-wordbook"));
-        const data: WordBook[] = [];
+        const data: TechBook[] = [];
         querySnapshot.forEach((document) => {
-          const wordbookData = document.data();
-          for (const key in wordbookData) {
+          const techbookData = document.data();
+          for (const key in techbookData) {
             data.push({
               id: document.id + "-" + key,
-              word: wordbookData[key].word,
-              definition: wordbookData[key].definition,
-              tags: wordbookData[key].tags,
+              word: techbookData[key].word,
+              definition: techbookData[key].definition,
+              tags: techbookData[key].tags,
             });
           }
         });
@@ -38,7 +38,7 @@ export const useData = () => {
   return { data, tags };
 };
 
-const getTags = (data: WordBook[]): string[] => {
+const getTags = (data: TechBook[]): string[] => {
   const tags = data.flatMap((item) => item.tags);
   return Array.from(new Set(tags));
 };
