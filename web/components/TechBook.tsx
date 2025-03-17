@@ -33,20 +33,22 @@ export default function TechBook() {
     );
   };
 
-  const filteredData = data.filter((item) => {
-    const matchesSearch = item.word
-      .toLowerCase()
-      .includes(searchTerm.toLowerCase());
+  const filteredData = data
+    .filter((item) => {
+      const matchesSearch = item.word
+        .toLowerCase()
+        .includes(searchTerm.toLowerCase());
 
-    const matchesTags =
-      selectedTags.length === 0 ||
-      (item.tags &&
-        (typeof item.tags === "string"
-          ? selectedTags.includes(item.tags)
-          : selectedTags.some((tag) => item.tags.includes(tag))));
+      const matchesTags =
+        selectedTags.length === 0 ||
+        (item.tags &&
+          (typeof item.tags === "string"
+            ? selectedTags.includes(item.tags)
+            : selectedTags.some((tag) => item.tags.includes(tag))));
 
-    return matchesSearch && matchesTags;
-  });
+      return matchesSearch && matchesTags;
+    })
+    .sort((a, b) => a.word.localeCompare(b.word));
 
   return (
     <div className="max-w-screen-md mx-auto mt-10">
