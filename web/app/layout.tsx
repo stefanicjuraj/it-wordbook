@@ -4,7 +4,7 @@ import "../globals.css";
 export const metadata: Metadata = {
   title: "IT wordbook",
   description:
-    "IT wordbook - searchable database collection of IT keywords, terms, and concepts with descriptive definitions.",
+    "IT wordbook - searchable database collection of IT keywords, terms, and concepts with descriptive explanations.",
   keywords: [
     "IT Wordbook",
     "IT Dictionary",
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "IT wordbook",
     description:
-      "IT wordbook - searchable database collection of IT keywords, terms, and concepts with descriptive definitions.",
+      "IT wordbook - searchable database collection of IT keywords, terms, and concepts with descriptive explanations.",
     url: "https://it-wordbook.web.app",
     siteName: "IT wordbook",
     images: [
