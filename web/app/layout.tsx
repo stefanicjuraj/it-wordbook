@@ -31,7 +31,7 @@ export const metadata: Metadata = {
     siteName: "IT wordbook",
     images: [
       {
-        url: "https://itwordbook.web.app/assets/images/it-wordbook.jpg",
+        url: "https://it-wordbook.web.app/assets/images/it-wordbook.jpg",
         width: 1200,
         height: 630,
       },
