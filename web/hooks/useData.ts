@@ -1,6 +1,8 @@
+"use client";
+
 import { useEffect, useState } from "react";
 import { collection, getDocs } from "firebase/firestore";
-import { db } from "../services/firebase";
+import { db } from "../firebase";
 import { WordBook } from "../types/wordbook";
 
 export const useData = () => {

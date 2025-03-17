@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 
-export const useShowScrollToTop = (threshold: number = 256) => {
+export const useScrollToTop = (threshold: number = 256) => {
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
