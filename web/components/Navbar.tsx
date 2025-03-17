@@ -9,7 +9,7 @@ export default function Navbar() {
               alt="logo"
               className="w-10 h-10 mr-3"
             />
-            <h1 className="text-2xl font-bold text-white">techbook.digital</h1>
+            <h1 className="text-2xl font-bold text-white">TechBook</h1>
           </div>
 
           <div className="flex items-center">
