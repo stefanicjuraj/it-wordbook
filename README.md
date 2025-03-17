@@ -1,10 +1,10 @@
-# IT wordbook
+# [techbook.digital](https://techbook.digital)
 
-<img align="right" width="200px" src="./web/public/assets/icons/wordbook-logo.svg" />
+<img align="right" width="200px" src="./web/public/assets/icons/techbook-logo.svg" />
 
-[**it-wordbook.web.app**](https://it-wordbook.web.app)
+[**techbook.digital**](https://techbook.digital)
 
-IT wordbook is a web application providing a searchable database collection of IT keywords, terms, and concepts with descriptive explanations. The application contains tags to filter words by departments within the IT industry:
+[techbook.digital](https://techbook.digital) is a web application providing a searchable database collection of IT keywords, terms, and concepts with descriptive explanations. The application contains tags to filter words by departments within the IT industry:
 
 - `Backend`, `Data`, `Design`, `DevOps`, `Docs`, `Frontend`, `Position`, `QA`, `Security`, `AI` 
 
