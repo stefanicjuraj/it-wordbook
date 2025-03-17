@@ -123,7 +123,15 @@ export default function TechBook() {
                     </div>
                   </td>
                   <td className="px-6 py-4 text-sm text-gray-800">
-                    {item.definition}
+                    {item.definition}{" "}
+                    <a
+                      className="text-blue-500 hover:underline text-xs"
+                      href={`https://google.com/search?q=${item.word}`}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                     [...]
+                    </a>
                   </td>
                 </tr>
               ))}
