@@ -100,8 +100,8 @@ export default function TechBook() {
         </div>
       </section>
 
-      <section id="results" className="mt-4 mb-40 animation glow delay-3">
-        <div className="overflow-x-auto border rounded-lg">
+      <section id="data" className="mt-4 mb-40 animation glow delay-3">
+        <div className="overflow-x-auto border rounded-lg shadow-sm shadow-black">
           <table className="min-w-full bg-white">
             <thead>
               <tr className="bg-gray-100">
