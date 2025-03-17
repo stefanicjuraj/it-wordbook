@@ -2,8 +2,6 @@
 
 <img align="right" width="200px" src="./web/public/assets/icons/techbook-logo.svg" />
 
-[**techbook.digital**](https://techbook.digital)
-
 [techbook.digital](https://techbook.digital) is a web application providing a searchable database collection of IT keywords, terms, and concepts with descriptive explanations. The application contains tags to filter words by departments within the IT industry:
 
 - `Backend`, `Data`, `Design`, `DevOps`, `Docs`, `Frontend`, `Position`, `QA`, `Security`, `AI` 
