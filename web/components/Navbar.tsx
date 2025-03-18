@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function Navbar() {
   return (
     <nav className="max-w-screen-md mx-auto bg-black rounded-b-lg shadow-lg">
@@ -9,10 +11,15 @@ export default function Navbar() {
               alt="logo"
               className="w-10 h-10 mr-3"
             />
-            <h1 className="text-2xl font-bold text-white">TechBook</h1>
+            <Link href="/">
+              <h1 className="text-2xl font-bold text-white">TechBook</h1>
+            </Link>
           </div>
 
-          <div className="flex items-center">
+          <div className="flex items-center gap-4">
+            <Link href="/contribute">
+              <p className="text-sm text-white hover:underline">Contribute</p>
+            </Link>
             <a
               href="https://github.com/stefanicjuraj/techbook.digital"
               target="_blank"
