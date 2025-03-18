@@ -132,40 +132,30 @@ export default function TechBook() {
                     </div>
                   </td>
                   <td className="px-6 py-4 text-sm text-gray-800">
-                    {item.definition}{" "}
-                    <span className="inline-flex items-center">
-                      <a
-                        className="text-xs text-blue-500 cursor-pointer hover:underline"
-                        href={`https://google.com/search?q=${item.word}`}
-                        target="_blank"
-                        rel="noopener noreferrer"
+                    {item.definition}
+                    <button
+                      onClick={() => handleCopy(item.definition, index)}
+                      className="inline-flex items-center ml-2 align-middle"
+                    >
+                      <img
+                        src={
+                          copiedId === index
+                            ? "/assets/icons/copy-green.svg"
+                            : "/assets/icons/copy.svg"
+                        }
+                        alt="Copy"
+                        className="w-4 h-4 cursor-pointer"
+                      />
+                      <span
+                        className={`ml-1 text-xs ${
+                          copiedId === index
+                            ? "text-green-500"
+                            : "text-gray-500"
+                        }`}
                       >
-                        [...]
-                      </a>
-                      <button
-                        onClick={() => handleCopy(item.definition, index)}
-                        className="inline-flex items-center ml-1"
-                      >
-                        <img
-                          src={
-                            copiedId === index
-                              ? "/assets/icons/copy-green.svg"
-                              : "/assets/icons/copy.svg"
-                          }
-                          alt="Copy"
-                          className="w-4 h-4 cursor-pointer"
-                        />
-                        <span
-                          className={`ml-1 text-xs ${
-                            copiedId === index
-                              ? "text-green-500"
-                              : "text-gray-500"
-                          }`}
-                        >
-                          {copiedId === index ? "copied" : ""}
-                        </span>
-                      </button>
-                    </span>
+                        {copiedId === index ? "copied" : ""}
+                      </span>
+                    </button>
                   </td>
                 </tr>
               ))}
