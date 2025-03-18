@@ -8,6 +8,7 @@ export default function TechBook() {
   const [searchTerm, setSearchTerm] = useState("");
   const [selectedTags, setSelectedTags] = useState<string[]>([]);
   const [availableTags, setAvailableTags] = useState<string[]>([]);
+  const [copiedId, setCopiedId] = useState<number | null>(null);
 
   useEffect(() => {
     if (tags && tags.length > 0) {
@@ -31,6 +32,14 @@ export default function TechBook() {
         ? prevTags.filter((t) => t !== tag)
         : [...prevTags, tag]
     );
+  };
+
+  const handleCopy = (text: string, id: number) => {
+    navigator.clipboard.writeText(text);
+    setCopiedId(id);
+    setTimeout(() => {
+      setCopiedId(null);
+    }, 1000);
   };
 
   const filteredData = data
@@ -124,14 +133,39 @@ export default function TechBook() {
                   </td>
                   <td className="px-6 py-4 text-sm text-gray-800">
                     {item.definition}{" "}
-                    <a
-                      className="text-blue-500 hover:underline text-xs"
-                      href={`https://google.com/search?q=${item.word}`}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                     [...]
-                    </a>
+                    <span className="inline-flex items-center">
+                      <a
+                        className="text-xs text-blue-500 cursor-pointer hover:underline"
+                        href={`https://google.com/search?q=${item.word}`}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        [...]
+                      </a>
+                      <button
+                        onClick={() => handleCopy(item.definition, index)}
+                        className="inline-flex items-center ml-1"
+                      >
+                        <img
+                          src={
+                            copiedId === index
+                              ? "/assets/icons/copy-green.svg"
+                              : "/assets/icons/copy.svg"
+                          }
+                          alt="Copy"
+                          className="w-4 h-4 cursor-pointer"
+                        />
+                        <span
+                          className={`ml-1 text-xs ${
+                            copiedId === index
+                              ? "text-green-500"
+                              : "text-gray-500"
+                          }`}
+                        >
+                          {copiedId === index ? "copied" : ""}
+                        </span>
+                      </button>
+                    </span>
                   </td>
                 </tr>
               ))}
